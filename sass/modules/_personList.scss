@@ -1,0 +1,33 @@
+@import "compass/css3";
+
+.person-list {
+    .person-item {
+    }
+    .person-txt {
+        .person-name {
+            line-height: 3.4rem;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        .person-details {
+            line-height: 3.4rem;
+        }
+    }
+    .person-img {
+        text-align: center;
+        vertical-align: middle;
+        .img {
+            @include inline-block;
+            @include border-radius(3.4rem);
+            width: 6.8rem;
+            height: 6.8rem;
+            vertical-align: middle;
+            @include box-sizing(border-box);
+            overflow: hidden;
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
