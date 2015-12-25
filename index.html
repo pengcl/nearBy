@@ -1,18 +1,135 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<head>
-    <meta charset="utf-8">
-    <meta content="width=320, user-scalable=no, minimal-ui" name="viewport">
-    <title>翼分期5.0-Demo</title>
-    <link style="text/css" rel="stylesheet" href="css/base-min.css">
-    <link style="text/css" rel="stylesheet" href="css/font-awesome.min.css">
-    <link style="text/css" rel="stylesheet" href="css/global.css">
-</head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title></title>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+        <link rel="stylesheet" type="text/css" href="public/styles/export.css" media="print"/>
+		    <style>
+        body {
+            font-size: 9pt;
+            margin: 0;
+            padding: 0;
+        }
 
-<body>
+        table {
+            width: 100%;
+            border-top: 1px solid #000;
+            border-left: 1px solid #000;
+        }
 
-<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
-</body>
+        table td {
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            padding: 5px;
+        }
+        ol.main {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        ol.main ol {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ol.main ol li {
+            line-height: 20px;
+        }
+        h2 {
+            font-size: 14px;
+        }
+        p {
+            text-indent: 2em;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        .sign-name table {
+            border: 1px solid #000;
+        }
+        .sign-name table td {
+            border: 0;
+        }
+		div.page { page-break-after: always }
+    </style>
+    </head>
+	<body>
+	#foreach ($salesOrder in $salesOrderMap.entrySet())
 
+		<div style="width:756px;height:1086px;float:left;">
+        <h1 style="text-align:center;font-size:24px; margin-top:190px;">乐享4G优惠（VPN）套餐业务登记单</h1>
+        <table cellspacing="0" cellpadding="0" style="margin-left:15px;margin-right:15px;width:726px;">
+            <tr>
+                <td style="width:20%">客户名称：$!{salesOrder.value.recieverName}</td>
+                <td style="width:20%">证件类型：$!{salesOrder.value.idType}</td>
+                <td style="width:35%">证件号码：$!{salesOrder.value.idNo}</td>
+                <td style="width:25%">联系电话：$!{salesOrder.value.recieverMobile}</td>
+            </tr>
+            <tr>
+                <td colspan="2">电子邮箱：</td>
+                <td colspan="2">联系地址：$!{salesOrder.value.address}</td>
+            </tr>
+            <tr>
+                <td>天翼号码：$!{salesOrder.value.mainMobile}</td>
+                <td>卡类型：$!{salesOrder.value.cardType}</td>
+                <td colspan="2">主卡：$!{salesOrder.value.mainUim}</td>
+            </tr>
+        </table>
+        <p>为维护双方权益，根据相关法律、法规的规定，在平等、自愿、公平、诚实信用的基础上，感谢您选择翼分期商城（www.gd189fq.com）的乐享4G优惠（VPN）套餐产品。为了让您更好地了解和使用我们的产品，请您认真阅读以下协议：</p>
+        <ol class="main">
+            <li>
+                <h2>一、乐享4G优惠（VPN）套餐内容：</h2>
+                <ol>
+                    <li>
+                        1、本套餐优惠期：36个月。套餐开通时间：默认顺丰送达次日自动开通（公休日/节假日除外）。
+                    </li>
+                    <li>2、订购原价<u> <span>$!{salesOrder.value.taocanType}</span> </u>现优惠价<u> <span>$!{salesOrder.value.taocanType}</span> </u>，包含手机国内上网流量<u> <span>$!{salesOrder.value.flow}</span> </u>，国内通话<u> <span>$!{salesOrder.value.duration}</span> </u>分钟，短信50条。</li>
+                </ol>
+            </li>
+            <li>
+                <h2>二、资费说明：</h2>
+                <ol>
+                    <li>1、套餐先使用、后付费，激活<b>开通当日即开始计费，开通当月套餐月费以及套餐流量、通话时长、短信均按当月剩余天数折算、计价。</b></li>
+                    <li>2、国内接听免费，赠送来电显示和189邮箱。</li>
+                    <li>3、套餐超出收费：（1）不足100MB按0.0003元/KB收费，100MB-500MB收费30元；用户套餐外流量超过500MB时，仍按上述原则（即每超出500MB收费30元）收费，以此类推。上网当月套餐外流量消费600元封顶, 流量15G封顶；。（2）国内通话：0.15元/分钟； （3）国内短/彩信：0.1元/条。</li>
+                <li>4、	话音时长使用规则：套餐内语音时长包含本地主叫（含本地市话和本地国内长途）和国内漫游主叫时长。</li>
+                <li>5、	流量使用规则：手机上网流量仅限中国大陆境内使用，不区分4G、3G、2G，不含WLAN(Wi-Fi)上网。 上网当月套餐外流量消费600元封顶，当月按套餐外资费累计的总流量（不含用户订购的各种流量包流量、各类赠送流量）达到封顶值（15GB）则暂停当月上网服务，次月初自动开通。</li>
+                </ol>
+            </li>
+            <li>
+                <h2>三、缴费说明：</h2>
+                <ol>
+                    <li>1、合约期内在不超出优惠月租内容的情况下，仅需支付优惠月租即可，就可享受原价套餐内相同内容。</li>
+                    <li>2、请在开通套餐次月8号前缴纳所选优惠套餐档次费用（可通过线上充值缴费），我们会在您已缴纳费用前提下每月9-13号减免套餐余下136元费用，如过缴费期未缴纳费用会影响号码正常使用。</li>
+                    <li>3、超过缴费约定期限且暂停服务超过60日的将被终止服务，并且号码会被回收。</li>
+                </ol>
+            </li>
+            <li>
+                <h2>四、温馨提示：</h2>
+                <ol>
+                    <li>1、手机卡只对应支持中国电信的移动4G终端配套使用；</li>
+                    <li>2、优惠套餐只可一证一号一次原则办理，不可办理副卡；</li>
+                    <li>3、	证件如已有注销、已开通优惠套餐记录不可再次办理。</li>
+                </ol>
+            </li>
+            <li>
+                <h2>五、售后风险：</h2>
+                <ol>
+                    <li>1、如需换卡、费用咨询、注销、过户等问题，欢迎通过翼分期商城微信号：yifenqimall与我们联系。</li>
+                    <li>2、特别提示您如注销使用，请务必先缴清费用并告知我们。否则会因欠费产生滞纳金，导致您成为电信黑名单客户，不能再次办理电信业务，并可能影响您的征信记录。</li>
+                    <li>3、	联系方式：1）通过添加朋友，搜索关注微信公众号“yifenqimall” ；2）或扫描以下二维码名片。</li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+		#if($velocityCount != $salesOrderMap.size())
+			  <div class="page" ></div>
+			  <h1 style="text-align:center;font-size:24px;margin-top: 150px;"></h1>
+		 #end
+    #end
+	</body>
 </html>
+

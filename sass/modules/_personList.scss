@@ -1,7 +1,11 @@
 @import "compass/css3";
 
 .person-list {
+    list-style: none;
     .person-item {
+        border-bottom: 1px solid #eee;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
     }
     .person-txt {
         .person-name {
@@ -11,6 +15,12 @@
         }
         .person-details {
             line-height: 3.4rem;
+            font-size: 1.2rem;
+            .fa {
+                font-size: 1.2rem;
+                line-height: 3.4rem;
+            }
+            em {margin-right: 1rem;}
         }
     }
     .person-img {
