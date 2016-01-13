@@ -7,13 +7,19 @@ body {
     font-size: 62.5%;
     overflow: hidden;
 }
-
+.yahei,.box {
+    font-family: "微软雅黑";
+}
 .pd15 {
     padding: 1.5rem;
 }
 
 .mg15 {
     margin: 1.5rem;
+}
+sub {
+    bottom: 0;
+    font-size: 50%;
 }
 
 .btn {
@@ -22,7 +28,11 @@ body {
 .opt5 {
     @include opacity(0.5);
 }
-
+ul,li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 .form-group {
     input {
         @include border-radius(0);

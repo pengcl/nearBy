@@ -1,19 +1,27 @@
 @import "compass/css3";
 
-.person-list {
+.list-content {
+    overflow-y: auto;
+    height: 500px;
+}
+.product-list {
     list-style: none;
-    .person-item {
+    .product-item {
         border-bottom: 1px solid #eee;
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
+        font-size: 1.2rem;
     }
-    .person-txt {
-        .person-name {
+    .product-txt {
+        label {
+            margin-bottom: 0;
+        }
+        .product-name {
             line-height: 3.4rem;
             font-size: 1.4rem;
             font-weight: bold;
         }
-        .person-details {
+        .product-details {
             line-height: 3.4rem;
             font-size: 1.2rem;
             .fa {
@@ -23,20 +31,26 @@
             em {margin-right: 1rem;}
         }
     }
-    .person-img {
+    .product-img {
         text-align: center;
         vertical-align: middle;
         .img {
             @include inline-block;
-            @include border-radius(3.4rem);
-            width: 6.8rem;
-            height: 6.8rem;
+            width: 80%;
             vertical-align: middle;
             @include box-sizing(border-box);
             overflow: hidden;
             img {
                 display: block;
                 width: 100%;
+            }
+        }
+        .price {
+            font-size: 1.6rem;
+            color: #cf0000;
+            margin-top: 0.7rem;
+            sub {
+                bottom: 0;
             }
         }
     }

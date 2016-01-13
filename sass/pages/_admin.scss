@@ -1,0 +1,71 @@
+.money {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 24.5rem;
+    font-size: 1.2rem;
+    color: #fff;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .box {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        text-align: center;
+        .icon {
+            font-size: 4rem;
+        }
+    }
+    .balance {
+        .box {
+            background: #50d2c2;
+        }
+    }
+    .donate {
+        .box {
+            background: #d667cd;
+        }
+    }
+}
+
+.package {
+    font-size: 1rem;
+    position: absolute;
+    width: 100%;
+    bottom: 4.5rem;
+    .box {
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-right: 1px solid #f2f2f2;
+        .txt {
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            padding-top: 0.5rem;
+        }
+        ins {
+            text-decoration: none;
+            background: #50d2c2;
+            width: 6rem;
+            height: 6rem;
+            @include border-radius(3rem);
+            margin: 0 auto;
+            display: block;
+            i {
+                font-size: 3rem;
+                line-height: 6rem;
+                color: #fff;
+            }
+        }
+    }
+    .package-1 {
+    }
+    .package-2 {}
+    .package-3 {
+    }
+    .package-4 {}
+}

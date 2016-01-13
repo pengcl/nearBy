@@ -64,6 +64,13 @@ nearbyControllers.controller('NearbyIndexCtrl', ['$scope', '$http', '$sce',
         });*/
   }]);
 
+nearbyControllers.controller('nearAdminCtrl', ['$scope', '$rootScope', 'AUTH_EVENTS', 'AuthService', '$http', function ($scope, $rootScope, AUTH_EVENTS, AuthService, $http) {
+    $scope.setClass = "admin";
+    $scope.load = function () {
+        //bannerInit();
+    };
+}]);
+
 nearbyControllers.controller('PersonListCtrl', ['$scope', '$http',
   function ($scope, $http) {
         /*$http.get('phones/phones.json').success(function (data) {

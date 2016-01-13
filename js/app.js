@@ -37,16 +37,16 @@ nearbyApp.config(['$routeProvider','USER_ROLES', function ($routeProvider,USER_R
             templateUrl: 'partials/register.html',
             controller: 'NearbyRegisterCtrl'
         }).
-        when('/person', {
-            templateUrl: 'partials/person-list.html',
-            controller: 'PersonListCtrl'
+        when('/product', {
+            templateUrl: 'partials/productList.html',
+            controller: 'ProductListCtrl'
         }).
         when('/person/:personId', {
-            templateUrl: 'partials/personDetail.html',
-            controller: 'PersonDetailCtrl'
+            templateUrl: 'partials/productDetail.html',
+            controller: 'ProductDetailCtrl'
         }).
         when('/admin', {
-            templateUrl: 'admin/index.html',
+            templateUrl: 'partials/admin.html',
             controller: 'nearAdminCtrl',
             data: {
                 authorizedRoles: [USER_ROLES.admin, USER_ROLES.editor]
